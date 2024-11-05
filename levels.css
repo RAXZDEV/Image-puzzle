@@ -1,0 +1,112 @@
+@font-face {
+	font-family: lemon-milk;
+	src: url(LEMONMILK-Bold.otf);
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: lemon-milk;
+}
+body{
+	background: url(background.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container{
+	height: 50vh;
+	width: 60vw;
+	background: hsla(269, 100%, 60%, 0.7);
+	backdrop-filter: blur(5px);
+	box-shadow: 4px 4px 40px hsla(269, 100%, 0%, 0.5), 0 0 20px hsla(269, 100%, 0%, 0.5) inset;
+	border: 4px solid #fff;
+	position: relative;
+	top: 0;
+	padding: 40px;
+	margin: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	animation: wipe 1s 1 ease-out;
+	overflow: hidden;
+}
+@keyframes wipe{
+	0%{
+		width:0vw;
+		height: 10vh;
+	}
+	25%{
+		width:60vw;
+		height: 10vh;
+	}
+	50%{
+		height: 10vh;
+	}
+	75%{
+		height: 50vh
+	}
+}
+a{
+	text-decoration: none;
+	
+}
+.ls{
+	display: flex;
+	flex: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10%;
+	background: #0015FF;
+	padding: 15px;
+	margin: 10px;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	background: linear-gradient(to left,
+		#7A00DF, #9634FF);
+	transition: 0.3s;
+	box-shadow: 3px 3px 10px hsla(269, 100%, 0%, 0.5), 3px 3px 20px hsla(269, 100%, 0%, 0.5) inset;
+	animation-name: bounce;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(105%);
+  }
+  100% {
+    transform: scale(100%)
+  }
+}
+.ls:active{
+	transform: scale(80%);
+	background: linear-gradient(to left,
+		#5E0FB3, #5E0FB3);
+	border: solid 2px #9634FF;
+	animation: none;
+}
+a .ls p{
+	font-size: 1.5em;
+	color: #fff;
+	text-align: start;
+	position: relative;
+	
+}
+h1{
+	color: #fff;
+	margin-bottom: 50px;
+	text-align: center;
+	text-shadow: 0px 0px 3px #fff;
+	text-decoration: underline;
+}

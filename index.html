@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="home.css">
+      <link rel="shortcut icon" href="fav.png" type="image/x-icon" />
+  <title>Image Puzzle (Home)</title>
+</head>
+
+<body>
+
+<div class="btn">
+  <a href="levels.html">
+  <img src="btn.png">
+ </a>
+</div>
+<audio id="song" autoplay loop>
+      <source src="music1.mp3" type="audio/mp3">
+    </audio>
+    <div class="music5">
+    <img src="sound.png" class="sound" id="icon">
+ <a href="#" class="link">  <img src="rate.png" class="sound" id="rate" alt="coming soooooon..."></a>
+</div>
+<div id="background">
+<div class="windowAlert">
+	<h2>
+	   ALERT!
+	</h2>
+	
+	<p>
+           Don't go to desktop site for better experience. ENJOY! GAME BY RAXZ_99
+	</p>
+	<button id="ok">
+           Ok
+	</button>
+</div>
+</div>
+    
+<script>
+var ok = document.querySelector("#ok");
+var window1 = document.querySelector("#background");
+
+ok.addEventListener("click", () => {
+	window1.style.display = "none";
+})
+var mySong = document.getElementById("song");
+
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+
+if(song.paused) {
+
+song.play();
+
+icon.src = "sound.png";
+
+}else{
+
+mySong.pause();
+
+icon.src = "mute.png";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
